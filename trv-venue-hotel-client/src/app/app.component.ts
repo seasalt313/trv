@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Bookhotel } from './bookhotel';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'trv-venue-hotel-client';
+  title = 'TRV Venue Hotel Search';
+
+  bookhotelList: Bookhotel[];
+  apiURL = 'http://localhost/3000/hotels'
+
+  constructor(private http: Http) {
+
+    console.log('please work');
+
+  }
+
+  getBookhotelData() {
+    this.http.get('http://localhost:3000/hotels')
+      .subscribe(res => this.bookhotelList =
+        res.json() as Bookhotel[]);
+
+  }
 }
+
