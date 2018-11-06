@@ -1,5 +1,189 @@
-h1 {
-    color: #369;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 250%;
+$font:'Lato', sans-serif;
+$dark: #333;
+$primary-color: paleturquoise;
+$secondary-color: palegoldenrod;
+$tertiary-color: palevioletred;
+
+//Navbar
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  font-family: $font;
+  background-color: $primary-color;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: right;
+  font-size: 16px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: right;
+  overflow: hidden;
+  background-color: $secondary-color;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px; 
+  color: $dark;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: $secondary-color;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: $tertiary-color;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: $tertiary-color;
+  color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#home-view, #hotel-view{
+  font-family: $font;
+}
+
+button {
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 10px;
+  color: white;
+  background-color: $tertiary-color;
+  a{
+    text-decoration: none;
+    color: white;
   }
+  a:hover{
+    color: white;
+  }
+}
+
+#home-view{
+  .nav {
+    text-align: right;
+    li {
+      list-style: none;
+    }
+  }
+  
+  #greeting {
+      color: white;
+      background-color: $dark;
+      font-size: 250%;
+      text-align: center;
+      padding: 10%;
+    }
+    .search {
+      text-align: center;
+      input {
+        margin: 0;
+        padding: 10px;
+        border: 0;
+        border-bottom: 1px solid grey;
+        font-size: 36px;
+      }
+    }
+    
+} 
+ 
+  //Hotel-view
+  #get-hotel-data button, .book-hotel-button button {
+    border: 1px solid black;
+  }
+
+  button:hover{
+    background-color: $dark;
+  }
+
+  #hotel-view{
+    background-image: url('../assets/germany.jpeg');
+  
+
+  
+    form {
+      text-align: center;
+      padding: 60px;
+      input {
+        margin: 0;
+        padding: 10px;
+        width: 600px;
+        border: 0;
+        border-radius: 1px;
+        border-bottom: 1px solid $primary-color;
+        font-size: 36px;
+      }
+    }
+  ul{
+    padding: 0;
+    .each-hotel {
+      border: 1px solid $dark;
+      padding: 20px;
+      background-color: white;
+      margin: 10px;
+      text-align: left;
+      .icon{
+        border-radius: 50%;
+      }
+      .hotel-name{
+        color: grey;
+  
+      }
+      .hotel-address{
+        color: grey;
+  
+      }
+      .hotel-cost{
+        color: grey;
+  
+      }
+      .book-hotel-button button{
+        color: grey;
+  
+      }
+    }
+  }
+
+}
+
+
+  
+   
