@@ -1,20 +1,23 @@
 <div id="home-view">
     <div class="navbar">
+        <div id="logo">
+            <a routerLink="/" routerLinkActive="active"><i class="fas fa-hotel"></i></a>
+        </div>
         <div class="dropdown">
-            <button class="dropbtn">Welcome Jane Doe
+            <button class="dropbtn">Welcome {{user}}
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="#">Account</a>
+                <a routerLink="/account" routerLinkActive="active">Account</a>
                 <a href="#">Payment</a>
                 <a href="#">Logout</a>
             </div>
         </div>
     </div>
     <div id="greeting">
-        <h1>{{name}}</h1>
+        <h1>BookHotel</h1>
+        <a routerLink="/hotels" routerLinkActive="active">Hotel search</a>
     </div>
-    <hotel-view></hotel-view>
 </div>
 
 <router-outlet></router-outlet>

@@ -12,6 +12,11 @@ $tertiary-color: palevioletred;
   background-color: $primary-color;
 }
 
+.navbar #logo a {
+  float: left;
+  color: $tertiary-color !important;
+  font-size: 18px;
+}
 /* Links inside the navbar */
 .navbar a {
   float: right;
@@ -39,6 +44,7 @@ $tertiary-color: palevioletred;
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
+  font-size: 18px;
 }
 
 /* Add a red background color to navbar links on hover */
@@ -110,7 +116,7 @@ button {
       background-color: $dark;
       font-size: 250%;
       text-align: center;
-      padding: 10%;
+      padding: 6%;
     }
     .search {
       text-align: center;

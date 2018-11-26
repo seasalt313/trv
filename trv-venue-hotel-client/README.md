@@ -1,1 +1,2 @@
-ng serve --open to start server
+To start the server, in your terminal type:
+ng serve --open 

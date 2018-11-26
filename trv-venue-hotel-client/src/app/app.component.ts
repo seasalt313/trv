@@ -15,18 +15,17 @@ export class BookHotelComponent {
 
   constructor(private http: Http) { }
 
-  getBookhotelData(city, country) {
-    city = city.charAt(0).toUpperCase() + city.slice(1);
-    country = country.charAt(0).toUpperCase() + country.slice(1);
+  getBookhotelData(term) {
+    // city = city.charAt(0).toUpperCase() + city.slice(1);
+    // country = country.charAt(0).toUpperCase() + country.slice(1);
 
-    this.http.get('http://localhost:3000/hotels?country=' + country + '?&city=' + city)
+    // this.http.get('http://localhost:3000/hotels?country=' + country + '?&city=' + city)
+    this.http.get('http://localhost:3000/hotels?' + term)
       .subscribe(res => this.bookhotelList =
         res.json() as Bookhotel[]);
 
     event.preventDefault()
-
     console.log(this);
-
   }
 }
 

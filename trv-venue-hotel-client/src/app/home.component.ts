@@ -10,7 +10,7 @@ import { viewAttached } from '@angular/core/src/render3/instructions';
     styleUrls: ['./app.component.scss'],
 })
 export class HomeComponent {
-    name = 'BookHotel';
+    user = 'Jane Doe';
     home: Home[];
 
     constructor(private http: Http) { }
